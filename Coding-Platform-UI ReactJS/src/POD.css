@@ -1,0 +1,201 @@
+:root {
+    --header: #646464;
+    --background: #ffffff;
+    --problem-name: #1a1a1a;
+    --topic-background: #e0e0e0;
+    --topic-border: #b0b0b0;
+    --dark-gray-text: #333333;
+    --medium-gray-text: #666666;
+    --light-gray-hover: #e0f2fe;
+    --dark-gray-button: #333333;
+    --darker-gray-hover: #1a1a1a;
+    --example-bg: #e0f2fe;
+    --example-border: #0284c7;
+    --example-text: #0369a1;
+    --code-bg: #eef2f7;
+    --code-text: #1a1a1a;
+    --pre-bg: #1e293b;
+    --pre-text: #f8fafc;
+    --link-color: #1f57b7;
+    --link-hover: #1e40af;
+}
+
+.leetCodePOD, .gfgPOD {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    max-width: min-content;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    border-radius: 1rem;
+}
+
+.pod-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.problem-half {
+    width: fit-content;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.problem-description {
+    text-align: left;
+}
+
+.problem-header {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--header); /* Light gray for header */
+    margin: 1rem 0 0;
+}
+
+.problem-name {
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--problem-name);
+}
+
+.related-topics-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.related-topic-item {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--topic-background); /* Light gray background */
+    color: var(--dark-gray-text); /* Dark gray text */
+    font-size: 0.9rem;
+    border: 1px solid var(--topic-border); /* Medium gray border */
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.related-topic-item:hover {
+    background-color: var(--topic-background); /* Medium gray on hover */
+}
+
+.right-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-half button {
+    align-self: flex-end;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    color: #ffffff; /* White text */
+    background-color: var(--dark-gray-button); /* Dark gray button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+    min-width: fit-content;
+    white-space: nowrap;
+}
+
+.right-half button:hover {
+    background-color: var(--darker-gray-hover); /* Darker gray on hover */
+}
+
+.problem-info {
+    display: flex;
+    gap: 5px;
+    color: var(--medium-gray-text); /* Medium gray for info */
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.problem-info span:hover {
+    cursor: pointer;
+}
+
+.description-container {
+    background-color: var(--background);
+    text-align: left;
+
+    p {
+        font-size: 1rem;
+        margin: 1rem 0 0;
+        color: var(--dark-gray-text);
+    }
+
+    code {
+        background-color: var(--code-bg);
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-family: 'Source Code Pro', monospace, monospace;
+        font-weight: 600;
+        color: var(--code-text);
+    }
+
+    strong {
+        color: #111;
+        font-weight: 700;
+    }
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    a:hover,
+    a:focus {
+        color: var(--link-hover);
+        border-color: var(--link-hover);
+        outline: none;
+    }
+
+    .example {
+        background-color: var(--example-bg);
+        border-left: 5px solid var(--example-border);
+        padding: 0.6rem 1rem;
+        margin: 1.5rem 0;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        color: var(--example-text);
+    }
+
+    pre {
+        background-color: var(--pre-bg);
+        color: var(--pre-text);
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: 'Source Code Pro', monospace, monospace;
+        font-size: 0.95rem;
+        margin: 0.5rem 0 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+        margin-left: 1.2rem;
+        color: #555;
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.description-container > * {
+    display: none; /* Hide all children */
+}
+
+.description-container > *:nth-child(-n+3) {
+    display: block; /* Show only the first 3 children */
+}

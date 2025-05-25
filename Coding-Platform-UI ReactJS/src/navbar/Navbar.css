@@ -1,0 +1,61 @@
+:root {
+    --navbar-title: #cccccc; /* Dark gray for text */
+    --navbar-title-hover: #ffffff; /* Darker gray for hover */
+    --navbar-bg: #202023
+}
+
+.navbar {
+    background-color: var(--navbar-bg   ); /* White background */
+    color: var(--navbar-title);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navbar-brand:hover {
+    color: var(--navbar-title-hover);
+    cursor: pointer;
+}
+
+.navbar-icon {
+    font-size: 1.25rem;
+    color: var(--navbar-title);
+}
+
+.navbar-icon:hover {
+    color: var(--navbar-title-hover);
+}
+
+.navbar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar-links span {
+    color: var(--navbar-title);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links span:hover {
+    cursor: pointer;
+    color: var(--navbar-title-hover);
+}
+
+.profile-icon {
+    margin-left: auto;
+}
+
+.profile-icon:hover {
+    cursor: pointer;
+}

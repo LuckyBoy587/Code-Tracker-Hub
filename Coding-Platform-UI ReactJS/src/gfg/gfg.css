@@ -1,0 +1,10 @@
+.description-container {
+    strong {
+        background-color: #eef2f7;
+        padding: 0.2em 0.4em;
+        border-radius: 4px;
+        font-family: 'Source Code Pro', monospace, monospace;
+        font-weight: 600;
+        color: var(--problem-name);
+    }
+}

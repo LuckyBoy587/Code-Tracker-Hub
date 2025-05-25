@@ -1,0 +1,138 @@
+.profile-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 1%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.profile-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f0f0f0 100%); /* Subtle card gradient */
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border: 4px solid #d0d0d0; /* Light gray border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a; /* Dark gray for name */
+    margin: 0 0 0.5rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-email {
+    font-size: 1.2rem;
+    color: #666666; /* Medium gray for email */
+    margin: 0 0 2rem;
+}
+
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background-color: #fafafa; /* Very light gray background */
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.profile-field:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+.profile-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333333; /* Dark gray for labels */
+}
+
+.profile-value {
+    font-size: 1.1rem;
+    color: #666666; /* Medium gray for values */
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.profile-value:hover {
+    color: #1a1a1a; /* Darker gray on hover */
+}
+
+.profile-input {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    border: none;
+    border-bottom: 2px solid #b0b0b0; /* Medium gray underline */
+    background-color: transparent;
+    color: #333333; /* Dark gray text */
+    width: 60%;
+    transition: border-bottom 0.3s ease;
+}
+
+.profile-input:focus {
+    outline: none;
+    border-bottom: 2px solid #1a1a1a; /* Darker gray on focus */
+}
+
+.profile-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff; /* White text */
+    background: linear-gradient(90deg, #333333 0%, #4d4d4d 100%); /* Gradient button */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    margin-top: 2rem;
+}
+
+.profile-button:hover {
+    background: linear-gradient(90deg, #1a1a1a 0%, #333333 100%); /* Darker gradient on hover */
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
